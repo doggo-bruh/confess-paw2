@@ -1,0 +1,106 @@
+@font-face {
+	font-family: "rock";
+	src: url("fonts/rock.ttf");
+}			 
+@font-face {
+	font-family: "sss";
+	src: url("fonts/sss.ttf");
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "sss", sans-serif;
+}
+	
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #5A5A5A;
+}
+h1{
+
+	color: #fff;
+	font-family: "rock";
+	font-size: 2.5em;
+}
+
+h2{
+
+	color: #fff;
+	font-family: "rock";
+	font-size: 2em;
+}
+p {
+	color: #D3D3D3;
+	font-family: "sss";
+}
+.calc {
+	cursor: pointer;
+	border-color: rgba(255, 255, 255, 0.25);
+	background-color: #2C3639;
+	border-style: solid;
+	border-radius: 5px;
+	font-size: 1em;
+	padding: 5px 15px;
+	color: #9DB2BF;
+	transition: 0.2s;
+}
+
+/*----------------------------------------------- Input Box */
+.inputBox {
+	flex-direction: column;
+	position: relative;
+	width: 300px;
+}
+.inputBox input {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	background: none;
+	border-radius: 5px;
+	outline: none; 
+	color: #fff;
+	font-size: 1em;
+}
+
+
+/*--------------------------------------------------- Button */
+.submit {
+	cursor: pointer;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	 position: relative;
+	 display: inline-block;
+	 padding: 0px 5px 5px 10px;
+	 color: white;
+	 letter-spacing: 5px;
+	 text-decoration: none;
+	 font-size: 1.25em;
+	 overflow: hidden;
+	 border-radius: 5px;
+} 
+.submit:active {
+	color: #5A5A5A;
+	background: rgba(255, 255, 255, 0.25);
+}
+
+
+
+
+footer {
+	text-align: right;
+	margin-right: 10px;
+	color: white;
+	font-size: 12px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	padding: 10px;
+	
+}

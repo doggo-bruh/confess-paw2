@@ -1,0 +1,133 @@
+@font-face {
+	font-family: "rock";
+	src: url("fonts/rock.ttf");
+}			 
+@font-face {
+	font-family: "sss";
+	src: url("fonts/sss.ttf");
+}
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "sss", sans-serif;
+}
+	
+body {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #5A5A5A;
+}
+h1 {
+	color: #fff;
+	font-family: "rock";
+	font-size: 3em;
+}
+
+.que {
+	font-size: 2em;
+	 text-transform: uppercase;
+	 letter-spacing: 5px;
+	 font-family: "rock";
+}
+p {
+	color: #D3D3D3;
+	font-family: "sss";
+	font-size: 1em;
+}
+
+#header {
+	margin-top: 80px;
+}
+
+
+/* ------------------------------------------------------------------Input Box */
+#inputContainer {
+	flex-direction: column;
+	position: relative;
+	width: 300px;
+}
+#inputContainer input {
+	width: 100%;
+	padding: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	background: none;
+	border-radius: 5px;
+	outline: none; 
+	color: #fff;
+	font-size: 1em;
+	transition: 0.5s;
+}
+
+/* ----------------------------------------------------------------------Button */
+#submit {
+	cursor: pointer;
+	 display: inline-block;
+	 padding: 10px 20px;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 5px;
+	 text-decoration: none;
+	 font-size: 0.85em;
+	 overflow: hidden;
+	 border-radius: 5px;
+	 border: 1px solid rgba(255, 255, 255, 0.25);
+	 width: 180px;
+	 margin-top: 10px;
+	 text-align: center;
+	 
+} 
+#submit:hover {
+	color: #D3D3D3;
+	background: #9DB2BF;
+	box-shadow: 0 0 10px #9DB2BF, 0 0 20px #9DB2BF, 0 0 50px #9DB2BF;
+	transition-delay: 0s;
+}
+
+
+/*--------------------------------------------------- Send */
+.send {
+	cursor: pointer;
+	 display: inline-block;
+	 padding: 10px 20px;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 5px;
+	 text-decoration: none;
+	 font-size: 0.85em;
+	 overflow: hidden;
+	 border-radius: 5px;
+
+	 width: 300px;
+	 margin-top: 10px;
+	 text-align: center;
+	 
+} 
+.send:active {
+	color: #D3D3D3;
+	background: #9DB2BF;
+	box-shadow: 0 0 10px #9DB2BF, 0 0 20px #9DB2BF, 0 0 50px #9DB2BF;
+	transition-delay: 0s;
+}
+
+
+
+
+footer {
+	text-align: right;
+	margin-right: 10px;
+	color: white;
+	font-size: 12px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	padding: 10px;
+	
+}

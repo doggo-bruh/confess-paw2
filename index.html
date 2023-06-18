@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<link rel="stylesheet" href="index.css">
+		<title> Arong </title>
+		<link href="https://fonts.cdnfonts.com/css/eagle-4" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<script src="index.js"></script>
+	</head>
+	<body>	
+		<h1> Confession </h1>
+		<h2> Link </h2>
+		<br/> <br/>
+		<p> Enter your Name:</p>
+		<div class="inputBox">
+			<input type="text" required id="namenya" name="name"> 
+		</div> <br/>
+	
+		<a  class="submit" onclick="Name()">SUBMIT</a>
+		
+		
+		
+		<script type="text/javascript">		
+			function Name() {
+				var name = document.getElementById("namenya").value;
+				localStorage.setItem("name", name);
+				location.href = "confess.html";			
+			}
+		</script>
+		
+		
+		<footer> Copyright @PAULINEMARIE </footer>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<link rel="stylesheet" href="confess.css">
+		<title> Arong </title>
+		<link href="https://fonts.cdnfonts.com/css/eagle-4" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<script src="confess.js"></script>
+		<script src="jquery.js"></script>
+		
+	</head>
+	<body>	
+		<p id="header"></p>
+		<br/>
+		<p class="que"> Do you have a crush? </p>
+		<a id="submit" onclick="nah()"> YEAH </a> 
+		<a class="sbmt"  href="no.html" id="submit"> NAH </a>
+		 	
+		
+		<br/>
+		<div id="inputCont" style="display: none;">
+			<p id="ok"></p>
+			<div id="inputContainer">
+			
+			<input type="text" required id="ans"> 
+			</div>
+			<a  class="send" onclick="sendans()">
+				Send
+			</a>
+		</div>
+		
+
+		
+		
+		<script>
+			var name = localStorage.getItem("name");
+			document.getElementById("header").textContent = "Hi " + name + ",";
+			
+			function nah() {
+				ok.textContent = "WHOOOOO?!";
+				document.getElementById("inputCont").style.display = "block";
+			}
+			
+			
+			
+			function sendans() {
+				var ans = document.getElementById("ans").value;
+				var name = localStorage.getItem("name");
+
+				var scriptUrl = "https://script.google.com/macros/s/AKfycbx_bwxP7fHtkzwF1eS-9jEDelq6IyybZFI4NLE7xzk6h33LMkDKeIZh3y9QkhHVNSkP/exec";
+
+				var xhr = new XMLHttpRequest();
+				xhr.open("POST", scriptUrl, true);
+				xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+				xhr.onreadystatechange = function() {
+				if (xhr.readyState === XMLHttpRequest.DONE) {
+					if (xhr.status === 200) {
+						alert("ans sent!");
+						 document.getElementById("inputCont").style.display = "none";
+					} else {
+						alert("Error Occured. Try Again");
+					}
+				}
+				};
+
+				xhr.send("name=" + encodeURIComponent(name) + "&ans=" + encodeURIComponent(ans));
+				}
+
+		</script>
+		
+			<footer> Copyright @PAULINEMARIE </footer>
+	</body>
+</html>
